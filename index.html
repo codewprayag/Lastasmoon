@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lasta's Moon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: #0b0c10;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      margin-top: 30px;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 300px;
+      margin: 20px auto;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      border-radius: 15px;
+    }
+    .love-letter {
+      font-size: 1.1rem;
+      margin: 30px auto;
+      max-width: 500px;
+    }
+    .spotify-link {
+      margin: 30px auto;
+      max-width: 300px;
+    }
+    .spotify-link img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .spotify-link p {
+      margin-top: 10px;
+      color: #1DB954;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>The moon the day you were born</h1>
+  <p>19th April 2005, Tuesday</p>
+
+  <div class="slideshow-container">
+    <img class="slide" src="Screenshot 2025-04-15 183220.png" alt="Slide 1">
+    <img class="slide" src="Screenshot 2025-04-15 183240.png" alt="Slide 2">
+    <img class="slide" src="Screenshot 2025-04-15 183249.png" alt="Slide 3">
+  </div>
+
+  <div class="love-letter">
+    <p>To the girl born under the softest moon,</p>
+    <p>As your moon, I am always watching over you. I hope you know how deeply you're loved — by the stars, by the night, and by me. Thank you for being born. I love you.</p>
+    <p>Forever yours,</p>
+    <p>Your Moon Prayag</p>
+  </div>
+
+  <div class="spotify-link">
+    <a href="https://open.spotify.com/track/390AWnOn2rfe9FzQjYmxIH?si=fb4649eb2d7244ae" target="_blank">
+      <img src="https://i.scdn.co/image/ab67616d0000b2734d1485bc8e9e1dbf5f95667f" alt="Wicked Game - Chris Isaak">
+    </a>
+    <p>Play on Spotify</p>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1;}
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+    }
+
+    showSlides();
+  </script>
+</body>
+</html>
